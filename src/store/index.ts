@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import carrrinhoReducer from './reducers/carrinho'
+import carrinhoReducer from './reducers/carrinho'
 
-const store = configureStore({
-  reducer:{
-    carrinho: carrrinhoReducer
+export const store = configureStore({
+  reducer: {
+    carrinho: carrinhoReducer
   }
 })
+
+export type RootReducer = ReturnType<typeof store.getState>
